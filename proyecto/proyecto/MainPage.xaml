@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proyecto.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" >
+            <Label Text="Respaldo" HorizontalTextAlignment="Start" TextColor="White" FontSize="32"/>
+        </Frame>
+        <Label Text="Servidores disponibles" FontSize="Title" Padding="20,10,0,0"/>
+
+        <Frame Padding="10" Margin="15">
+            <Grid BackgroundColor="White" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                <ColumnDefinition Width="2.5*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label HorizontalTextAlignment="Center" TextColor="Black" FontSize="16" Grid.Row="0" Grid.Column="0">ID</Label>
+            <Label HorizontalTextAlignment="Center" TextColor="Black" FontSize="16" Grid.Row="0" Grid.Column="1">Nombre</Label>
+        </Grid>
+        </Frame>
+        <ListView>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame>
+                            <Grid>
+                                <Label HorizontalTextAlignment="Center" TextColor="Black" FontSize="16" Grid.Row="0" Grid.Column="1"></Label>
+                                <Label HorizontalTextAlignment="Center" TextColor="Black" FontSize="16" Grid.Row="0" Grid.Column="1"></Label>
+                            </Grid>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        
+        <!--<Label FontSize="16" Padding="20,0,20,0" Text="Aqui ira una tabla ...">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Seleccione un servidor para poder continuar "/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label> -->
+       
+    </StackLayout>
+
+</ContentPage>
