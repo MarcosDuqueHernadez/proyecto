@@ -9,8 +9,8 @@
         </Frame>
         
         <Label Text="Servidores disponibles" FontSize="Title" Padding="20,10,0,0"/>
-        <ListView ItemsSource="{Binding servidores}" HasUnevenRows="True"  
-                  ItemSelected="ListView_ItemSelected" ItemTapped="ListView_ItemTapped" Margin="10">
+        <ListView ItemsSource="{Binding servidores}" 
+                  ItemSelected="ListView_ItemSelected"  Margin="10">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -32,7 +32,7 @@
 
         <Label Text="Bases de datos disponibles" FontSize="Title" Padding="20,10,0,0"/>
         <ListView ItemsSource="{Binding basesDatos}" HasUnevenRows="True"  
-                  ItemSelected="ListView_ItemSelected_base" ItemTapped="ListView_ItemTapped_base" Margin="10 10 10 10">
+                  ItemSelected="ListView_ItemSelected_base"  Margin="10,10, 10, 10">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -55,7 +55,7 @@
         
         
         
-        <Button Margin="2 20 200 20" Text="Crear Respaldo" Clicked="Button_clicked"></Button>
+        <Button Margin="20, 200, 20, 20" Text="Crear Respaldo" Clicked="Button_clicked"></Button>
 
 
     </StackLayout>

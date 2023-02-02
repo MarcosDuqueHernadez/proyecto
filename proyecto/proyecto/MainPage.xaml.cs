@@ -34,20 +34,12 @@ namespace proyecto
             servidores selectedItem = e.SelectedItem as servidores;
         }
 
-        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            servidores tappedItem = e.Item as servidores;
-        }
-
         private void ListView_ItemSelected_base(object sender, SelectedItemChangedEventArgs e)
         {
             BasesDatos selectedItem = e.SelectedItem as BasesDatos;
         }
 
-        private void ListView_ItemTapped_base(object sender, ItemTappedEventArgs e)
-        {
-            BasesDatos tappedItem = e.Item as BasesDatos;
-        }
+
 
         private void Button_clicked(object sender, EventArgs e)
         {
