@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="proyecto.MainPage">
+             x:Class="proyecto.MainPage" NavigationPage.HasNavigationBar="False">
     <StackLayout BackgroundColor="White">
         <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" RowSpacing="20" >
             <Grid.RowDefinitions>
@@ -28,10 +28,11 @@
                 <Frame CornerRadius="30" Margin="0,10,0,15" HasShadow="False" BackgroundColor="#F0F0F0" HeightRequest="20">
                     <Entry ClearButtonVisibility="WhileEditing" Margin="0,-30,0,-30" Placeholder="Contraseña" PlaceholderColor="#B6B5B5" IsPassword="True" TextColor="#1C375C" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"></Entry>
                 </Frame>
-                <Button Text="iniciar sesión" BackgroundColor="#1C375C" TextColor="White" FontAttributes="Bold" CornerRadius="20"></Button>
-                <Label  Text="o inicia sesión con" FontSize="16" Margin="0,20,0,0" HorizontalOptions="CenterAndExpand" TextColor="#1C375C"></Label>
+                <Button Text="iniciar sesión" Clicked="NavigateTo" BackgroundColor="#1C375C" TextColor="White" FontAttributes="Bold" CornerRadius="20"
+                        x:Name="Button1"></Button>
+               <!-- <Label  Text="o inicia sesión con" FontSize="16" Margin="0,20,0,0" HorizontalOptions="CenterAndExpand" TextColor="#1C375C"></Label> -->
             </StackLayout>
-            <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="40">
+            <!--<StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="40">
                 <Image Source="https://res.cloudinary.com/dxoszbbna/image/upload/v1675324564/facebook-svgrepo-com_l9fqs0.png" WidthRequest="50"
                   HeightRequest="50" Aspect="AspectFit"></Image>
                 <Image Source="https://res.cloudinary.com/dxoszbbna/image/upload/v1675324491/twitter-color-svgrepo-com_mguzdc.png" WidthRequest="50"
@@ -44,7 +45,7 @@
             <StackLayout Grid.Row="3" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
                 <Label Text="Recuperar contraseña" FontAttributes="Bold" TextColor="Black" FontSize="16" Margin="0,15,0,10" HorizontalOptions="CenterAndExpand"></Label>
                 <Label Text="¿No tienes cuenta? crea una aquí" TextDecorations="Underline" FontSize="16" TextColor="Black" HorizontalOptions="CenterAndExpand"></Label>
-            </StackLayout>
+            </StackLayout>-->
         </Grid>
     </StackLayout>
  

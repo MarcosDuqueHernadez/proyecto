@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="proyecto.Servidores" NavigationPage.HasBackButton="False" Title="Inicio" BackgroundColor="White">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cerrar sesión"
+                     Clicked="LogOut" 
+                     Order="Secondary">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout Padding="20,30,20,50">
+            <Label FontSize="24" TextColor="Black" FontAttributes="Bold"  Margin="0,0,0,10">Servidores</Label>
+            <Label FontSize="18" Margin="0,0,0,20">Para comenzar una copia de seguridad, por favor seleccione un servidor a continuación:</Label>
+
+            <ListView x:Name="ListDemo" BackgroundColor="#F6F6F6"  IsPullToRefreshEnabled="false"
+                      RefreshControlColor="#1C375C">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell ImageSource="https://res.cloudinary.com/dxoszbbna/image/upload/v1675658641/server-svgrepo-com_1_z5q11d.png"
+                                   DetailColor="#1C375C"
+                                   TextColor="#1C375C"
+                                   Text="{Binding name}">
+                        </ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <StackLayout Margin="0,60,0,0">
+                <Button Text="Continuar" Clicked="GoToDataBase"  BackgroundColor="#1C375C" TextColor="White" FontAttributes="Bold" CornerRadius="20" x:Name="Button1"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
